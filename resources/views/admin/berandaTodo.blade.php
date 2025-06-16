@@ -8,7 +8,7 @@
                 <h5 class="text-white mb-1">Selamat Datang, <strong>{{ $detailPegawai->nama }}</strong></h5>
                 <small class="text-secondary">{{ $detailPegawai->jabatan }}</small>
             </div>
-            <a href="/" class="btn btn-outline-primary">Keluar</a>
+            <a href="/" class="btn btn-outline-light">Keluar</a>
         </div>
 
         {{-- MENU ADMIN --}}

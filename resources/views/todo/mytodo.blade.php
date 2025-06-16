@@ -12,27 +12,34 @@
         </form>
     </div>
 
-    {{-- Breadcrumb Navigation --}}
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb bg-secondary px-4 py-2 rounded shadow-sm">
-            <li class="breadcrumb-item">
-                <a href="/todo/user/login/{{ $idPengguna }}" class="text-white text-decoration-none">Beranda</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a href="{{ route('todo.selesai', ['id' => $idPengguna]) }}" class="text-white text-decoration-none">Tugas Selesai</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a href="{{ route('todo.ditolak', ['id' => $idPengguna]) }}" class="text-white text-decoration-none">Tugas ditolak</a>
-            </li>
-        </ol>
-    </nav>
+    
+    <nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb bg-dark px-4 py-3 rounded shadow-sm border border-secondary">
+        <li class="breadcrumb-item">
+            <a href="/todo/user/login/{{ $idPengguna }}" class="text-light text-decoration-none">
+                <i class="bi bi-house-door-fill me-1"></i> Beranda
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ route('todo.selesai', ['id' => $idPengguna]) }}" class="text-light text-decoration-none">
+                <i class="bi bi-check2-circle me-1"></i> Tugas Selesai
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{{ route('todo.ditolak', ['id' => $idPengguna]) }}" class="text-light text-decoration-none">
+                <i class="bi bi-x-circle me-1"></i> Tugas Ditolak
+            </a>
+        </li>
+    </ol>
+</nav>
 
-    {{-- Judul --}}
+
+    
     <div class="text-center text-white mt-4 mb-3">
         <h3><i class="bi bi-list-task"></i> Daftar Tugas Saya</h3>
     </div>
 
-    {{-- Daftar Tugas --}}
+    
     <div class="card bg-dark text-white shadow-sm border-0">
         <div class="card-body p-0">
             @if (count($daftarTugas) > 0)

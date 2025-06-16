@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
     <style>
         body {
-            background: linear-gradient(to right, #343736, #ACB6E5);
+            background: linear-gradient(to right, #343736, #ffffff);
             height: 100vh;
             display: flex;
             align-items: center;
@@ -22,7 +22,7 @@
             backdrop-filter: blur(10px);
             border: none;
             border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(50, 31, 135, 0.37);
             color: #fff;
             width: 100%;
             max-width: 420px;
@@ -68,7 +68,7 @@
         <div class="card mx-auto">
             <div class="card-body text-center">
                 <h5 class="card-title">TODO LIST</h5>
-                <p class="card-text">Riwayat dan Status Penugasan</p>
+                
                 <hr style="border-color: rgba(255,255,255,0.3)">
 
                 @if(session('error'))
@@ -90,7 +90,7 @@
                         <input type="password" name="kataSandi" class="form-control" placeholder="Kata Sandi" required>
                     </div>
                     <div class="mb-3">
-                        <input type="submit" class="btn btn-primary w-100" value="Masuk!">
+                        <input type="submit" class="btn btn-primary " value="Masuk!">
                     </div>
                 </form>
             </div>

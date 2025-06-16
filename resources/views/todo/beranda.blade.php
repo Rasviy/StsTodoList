@@ -3,7 +3,7 @@
 @section('content')
     <div class="container py-4">
 
-        {{-- HEADER --}}
+        
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <h4 class="text-white mb-1">Selamat Datang, <strong>{{ $detailPegawai->nama }}</strong></h4>
@@ -12,10 +12,10 @@
             <a href="/" class="btn btn-outline-light">Keluar</a>
         </div>
 
-        {{-- KARTU TUGAS --}}
+        
         <div class="row g-4">
             {{-- Daftar Tugas --}}
-            <div class="col-md-4">
+            <div class="text-center mb-4">
                 <div class="card bg-dark text-white h-100 shadow-lg border-0 rounded-4 hover-shadow">
                     <div class="card-body text-center">
                         <h5 class="card-title">Daftar Tugas</h5>

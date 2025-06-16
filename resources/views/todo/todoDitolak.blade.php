@@ -3,25 +3,25 @@
 @section('content')
 <div class="container py-4">
 
-    {{-- Breadcrumb --}}
+    
     <nav aria-label="breadcrumb" class="mb-4">
-        <ol class="breadcrumb bg-light px-3 py-2 rounded">
+        <ol class="breadcrumb bg-dark px-4 py-3 rounded shadow-sm border border-secondary">
             <li class="breadcrumb-item">
-                <a href="/todo/user/login/{{ $idPengguna }}" class="text-decoration-none">Beranda</a>
+                <a href="/todo/user/login/{{ $idPengguna }}" class="text-light text-decoration-none">Beranda</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="/todo/mytodo/{{ $idPengguna }}" class="text-decoration-none">Daftar Penugasan</a>
+                <a href="/todo/mytodo/{{ $idPengguna }}" class="text-light text-decoration-none">Daftar Penugasan</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">Tugas Ditolak</li>
         </ol>
     </nav>
 
-    {{-- Judul --}}
+    
     <div class="text-center mb-4">
         <h4 class="fw-bold text-danger">❌ Tugas Tidak Dikerjakan</h4>
     </div>
 
-    {{-- Tabel --}}
+    
     @if (count($todoDitolak) > 0)
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped align-middle bg-white shadow-sm">
