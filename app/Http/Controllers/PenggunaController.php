@@ -76,7 +76,7 @@ class PenggunaController extends Controller
         switch (strtolower($pegawai->jabatan)) {
             case 'staff':
             case 'pelaksana':
-                return redirect("/todo/mytodo/{$pegawai->id}");
+                return redirect("/todo/user/login/{$pegawai->id}");
 
            
 

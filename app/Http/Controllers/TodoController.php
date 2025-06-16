@@ -40,29 +40,6 @@ class TodoController extends Controller
         ]);
     }
 
-    public function detailTodo($id, $idPengguna)
-    {
-        $detailTodo = DB::table('tb_todo as todo')
-            ->join('tb_pegawai as pemberi', 'todo.tugas_dari', '=', 'pemberi.id')
-            ->select('todo.id', 'todo.tugas', 'todo.waktu_mulai', 'todo.waktu_selesai', 'pemberi.nama as pemberi_tugas', 'todo.keterangan')
-            ->where('todo.id', $id)
-            ->first();
-
-        return view('todo.detailTodo', [
-            'detailTodo' => $detailTodo,
-            'idPengguna' => $idPengguna
-        ]);
-    }
-
-    public function perbaruiTodo(Request $request, $id)
-    {
-        DB::table('tb_todo')
-            ->where('id', $id)
-            ->update(['keterangan' => $request->statusPekerjaan]);
-
-        return redirect()->route('todo.mytodo', ['id' => $request->idPengguna])->with('success', 'Status berhasil diperbarui!');
-    }
-
     public function todoSelesai($id)
     {
         $todoSelesai = DB::table('tb_todo')
@@ -128,8 +105,8 @@ class TodoController extends Controller
     {
         $delegator = DB::table('tb_pegawai')->where('id', $id)->get();
         $pelaksana = DB::table('tb_pegawai')
-            ->where('jabatan', 'Staff')
-            ->orWhere('jabatan', '')
+            ->where('jabatan', 'Staff', '')
+            ->orWhere('jabatan', 'pelaksana')
             ->get();
 
         return view('admin.penugasanBaru', [
@@ -184,7 +161,7 @@ class TodoController extends Controller
             ->first();
 
         $delegator = DB::table('tb_pegawai')->where('id', $adminId)->first();
-        $pelaksana = DB::table('tb_pegawai')->whereIn('jabatan', ['Staff', 'Manajer'])->get();
+        $pelaksana = DB::table('tb_pegawai')->whereIn('jabatan', ['Staff', 'pelaksana'])->get();
 
         return view('admin.ubahPenugasan', [
             'detailTodo' => $detailTodo,
@@ -263,20 +240,5 @@ class TodoController extends Controller
         ]);
     }
 
-    public function rincianPenugasan($id)
-    {
-        $ditugaskan = DB::table('tb_todo')->where('keterangan', 'Ditugaskan')->get();
-        $diselesaikan = DB::table('tb_todo')->where('keterangan', 'Selesai')->get();
-        $ditolak = DB::table('tb_todo')->where('keterangan', 'Ditolak')->get();
-
-        return view('admin.rincianPenugasan', [
-            'ditugaskan' => $ditugaskan,
-            'diselesaikan' => $diselesaikan,
-            'ditolak' => $ditolak,
-            'adminId' => $id,
-            'jumlahDitugaskan' => $ditugaskan->count(),
-            'jumlahDiselesaikan' => $diselesaikan->count(),
-            'jumlahDitolak' => $ditolak->count()
-        ]);
-    }
+    
 }

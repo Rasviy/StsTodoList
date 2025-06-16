@@ -30,11 +30,7 @@ Route::get('/todo/user/login/{id}', [PenggunaController::class, 'login']);
 Route::post('/logout', [PenggunaController::class, 'logout']);
 
 
-
 Route::get('/todo/mytodo/{id}', [TodoController::class, 'mytodo'])->name('todo.mytodo');
-Route::get('/todo/detailTugas/{id}/{idPengguna}', [TodoController::class, 'detailTodo']);
-Route::get('/todo/perbaruiTodo/{id}', [TodoController::class, 'perbaruiTodo']);
-
 
 Route::get('/todo/{id}/todoSelesai', [TodoController::class, 'todoSelesai'])->name('todo.selesai');
 Route::get('/todo/{id}/todoDitolak', [TodoController::class, 'todoDitolak'])->name('todo.ditolak');

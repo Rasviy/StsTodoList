@@ -1,36 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-4">
-    {{-- Tombol Logout di kanan atas --}}
-    <div class="d-flex justify-content-end mb-3">
-        <form action="{{ url('/logout') }}" method="POST">
-            @csrf
-            <button class="btn btn-outline-light btn-sm">
-                <i class="bi bi-box-arrow-right"></i> Logout
-            </button>
-        </form>
-    </div>
 
     
     <nav aria-label="breadcrumb" class="mb-4">
-    <ol class="breadcrumb bg-dark px-4 py-3 rounded shadow-sm border border-secondary">
+    <div class="breadcrumb bg-dark px-4 py-3 rounded border-secondary">
         <li class="breadcrumb-item">
             <a href="/todo/user/login/{{ $idPengguna }}" class="text-light text-decoration-none">
-                <i class="bi bi-house-door-fill me-1"></i> Beranda
+                <p class="btn btn-outline-light">Beranda</p>
             </a>
         </li>
         <li class="breadcrumb-item">
             <a href="{{ route('todo.selesai', ['id' => $idPengguna]) }}" class="text-light text-decoration-none">
-                <i class="bi bi-check2-circle me-1"></i> Tugas Selesai
+                <p class="btn btn-outline-light">Tugas Selesai</p> 
             </a>
         </li>
         <li class="breadcrumb-item">
             <a href="{{ route('todo.ditolak', ['id' => $idPengguna]) }}" class="text-light text-decoration-none">
-                <i class="bi bi-x-circle me-1"></i> Tugas Ditolak
+                <p class="btn btn-outline-light">Tugas Ditolak</p> 
             </a>
         </li>
-    </ol>
+    </div>
 </nav>
 
 

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container py-4">
-        {{-- HEADER --}}
+        
         <div class="d-flex justify-content-between align-items-center mb-3">
             <div>
                 <h5 class="text-white mb-1">Selamat Datang, <strong>{{ $detailPegawai->nama }}</strong></h5>
@@ -11,11 +11,12 @@
             <a href="/" class="btn btn-outline-light">Keluar</a>
         </div>
 
-        {{-- MENU ADMIN --}}
-        <div class="card bg-dark text-white mb-4">
+        
+        <div class="bg-dark text-white mb-4">
             <div class="card-header text-center fw-bold fs-5">
-                Menu Admin
+                <h5 class="card-title">Dashboard Admin</h5>
             </div>
+            <br>
             <div class="card-body text-center">
                 <div class="btn-group" role="group">
                     <a href="/todo/admin/{{ $adminId }}" class="btn btn-outline-light">Beranda</a>
@@ -26,7 +27,7 @@
             </div>
         </div>
 
-        {{-- TABEL TODO --}}
+       
         @if(count($dataTodo) < 1)
             <div class="alert alert-info text-center">Tidak ada todo!</div>
         @else

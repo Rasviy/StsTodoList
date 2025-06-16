@@ -3,18 +3,19 @@
 @section('content')
 <div class="container mt-4">
     <div class="d-flex justify-content-start mb-3 gap-2">
-        <a class="btn btn-outline-primary btn-sm" href="/todo/admin/{{ $adminId }}">Beranda</a>
-        <a class="btn btn-outline-primary btn-sm" href="/admin/todo/penugasanBaru/{{ $adminId }}">Penugasan Baru</a>
-        <a class="btn btn-outline-primary btn-sm" href="/admin/todo/penugasanSelesai/{{ $adminId }}">Tugas Selesai</a>
-        <a class="btn btn-outline-primary btn-sm" href="/admin/todo/penugasanDitolak/{{ $adminId }}">Tugas Ditolak</a>
+        <a class="btn btn-outline-light" href="/todo/admin/{{ $adminId }}">Beranda</a>
+        <a class="btn btn-outline-light" href="/admin/todo/penugasanBaru/{{ $adminId }}">Penugasan Baru</a>
+        <a class="btn btn-outline-light" href="/admin/todo/penugasanSelesai/{{ $adminId }}">Tugas Selesai</a>
+        <a class="btn btn-outline-light" href="/admin/todo/penugasanDitolak/{{ $adminId }}">Tugas Ditolak</a>
     </div>
 
-    <div class="card shadow-sm">
+    <div class="container-sm">
         <div class="card-body">
             <h4 class="mb-3">Buat Penugasan Baru</h4>
 
             <form action="/admin/todo/simpanPenugasanBaru" method="POST">
                 @csrf
+                <table>
                 <div class="mb-3">
                     <label for="namaTodo" class="form-label">Nama Tugas</label>
                     <input type="text" id="namaTodo" name="namaTodo" class="form-control" placeholder="Nama Tugas" required>
@@ -38,6 +39,7 @@
                             <option value="{{ $nd->id }}">{{ $nd->nama }}</option>
                         @endforeach
                     </select>
+                    </table>
                 </div>
 
                 <div class="mb-4">
@@ -50,7 +52,7 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Tugaskan!</button>
+                <button type="submit" class="btn btn-outline-light">Tugaskan!</button>
             </form>
         </div>
     </div>
