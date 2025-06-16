@@ -1,0 +1,101 @@
+/* style.css - Desain Tema Gelap Elegan */
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.text-secondary {
+    color: #aaaaaa !important;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #03e9f4;
+}
+
+/* Card Style */
+.card {
+    background-color: #1e1e1e;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Table */
+.table-dark {
+    background-color: #1f1f1f;
+}
+
+.table thead th {
+    background-color: #00bcd4;
+    color: #000;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Badge Custom */
+.badge {
+    padding: 0.4em 0.6em;
+    font-size: 0.85em;
+    border-radius: 0.35rem;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+.btn-outline-primary {
+    border-color: #03a9f4;
+    color: #03a9f4;
+}
+
+.btn-outline-primary:hover {
+    background-color: #03a9f4;
+    color: #121212;
+}
+
+.btn-danger {
+    background-color: #e53935;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c62828;
+}
+
+/* Custom Alerts */
+.alert-info {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+}
+
+/* Responsive Container */
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
