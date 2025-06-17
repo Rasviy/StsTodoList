@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
     <style>
         body {
-            background: linear-gradient(to right, #343736, #ffffff);
+            background: linear-gradient(to right, #323232, #000000);
             height: 100vh;
             display: flex;
             align-items: center;
