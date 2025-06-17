@@ -19,7 +19,7 @@
             <br>
             <div class="card-body text-center">
                 <div class="btn-group" role="group">
-                    <a href="/todo/admin/{{ $adminId }}" class="btn btn-outline-light">Beranda</a>
+                    {{-- <a href="/todo/admin/{{ $adminId }}" class="btn btn-outline-light">Beranda</a> --}}
                     <a href="/admin/todo/penugasanBaru/{{ $adminId }}" class="btn btn-outline-light">Penugasan Baru</a>
                     <a href="/admin/todo/penugasanSelesai/{{ $adminId }}" class="btn btn-outline-light">Tugas Selesai</a>
                     <a href="/admin/todo/penugasanDitolak/{{ $adminId }}" class="btn btn-outline-light">Tugas Ditolak</a>

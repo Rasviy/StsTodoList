@@ -22,7 +22,7 @@
             backdrop-filter: blur(10px);
             border: none;
             border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(50, 31, 135, 0.37);
+            box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
             color: #fff;
             width: 100%;
             max-width: 420px;
@@ -90,7 +90,7 @@
                         <input type="password" name="kataSandi" class="form-control" placeholder="Kata Sandi" required>
                     </div>
                     <div class="mb-3">
-                        <input type="submit" class="btn btn-primary " value="Masuk!">
+                        <input type="submit" class="btn btn-light " value="Masuk!">
                     </div>
                 </form>
             </div>
