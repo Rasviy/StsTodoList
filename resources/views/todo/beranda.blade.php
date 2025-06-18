@@ -11,8 +11,7 @@
             </div>
             <a href="/" class="btn btn-outline-light">Logout</a>
         </div>
-
-        
+    
         <div class="row g-4">
             
             <div class="text-center mb-4">
@@ -25,30 +24,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- Tugas Selesai --}}
-            {{-- <div class="col-md-4">
-                <div class="card bg-dark text-white h-100 shadow-lg border-0 rounded-4 hover-shadow">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Tugas Diselesaikan</h5>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="/todo/mytodo/todoSelesai/{{ $detailPegawai->id }}" class="btn btn-success px-4">Tugas Selesai</a>
-                    </div>
-                </div>
-            </div> --}}
-
-            {{-- Tugas Ditolak
-            <div class="col-md-4">
-                <div class="card bg-dark text-white h-100 shadow-lg border-0 rounded-4 hover-shadow">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Tugas Ditolak</h5>
-                    </div>
-                    <div class="card-footer bg-transparent border-0 text-center">
-                        <a href="/todo/mytodo/todoDitolak/{{ $detailPegawai->id }}" class="btn btn-danger px-4">Tidak Diselesaikan</a>
-                    </div>
-                </div>
-            </div> --}}
         </div>
     </div>
 @endsection

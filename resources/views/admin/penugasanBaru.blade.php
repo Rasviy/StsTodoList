@@ -4,7 +4,7 @@
 <div class="container mt-4">
     <div class="d-flex justify-content-start mb-3 gap-2">
         <a class="btn btn-outline-light" href="/todo/admin/{{ $adminId }}">Beranda</a>
-        <a class="btn btn-outline-light" href="/admin/todo/penugasanBaru/{{ $adminId }}">Penugasan Baru</a>
+        {{-- <a class="btn btn-outline-light" href="/admin/todo/penugasanBaru/{{ $adminId }}">Penugasan Baru</a> --}}
         <a class="btn btn-outline-light" href="/admin/todo/penugasanSelesai/{{ $adminId }}">Tugas Selesai</a>
         <a class="btn btn-outline-light" href="/admin/todo/penugasanDitolak/{{ $adminId }}">Tugas Ditolak</a>
     </div>
